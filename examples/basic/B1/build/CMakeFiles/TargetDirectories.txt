@@ -1,0 +1,8 @@
+/home/steven/geant4.10.02.p03/examples/basic/B1/build/CMakeFiles/rebuild_cache.dir
+/home/steven/geant4.10.02.p03/examples/basic/B1/build/CMakeFiles/edit_cache.dir
+/home/steven/geant4.10.02.p03/examples/basic/B1/build/CMakeFiles/install.dir
+/home/steven/geant4.10.02.p03/examples/basic/B1/build/CMakeFiles/exampleB1.dir
+/home/steven/geant4.10.02.p03/examples/basic/B1/build/CMakeFiles/B1.dir
+/home/steven/geant4.10.02.p03/examples/basic/B1/build/CMakeFiles/install/strip.dir
+/home/steven/geant4.10.02.p03/examples/basic/B1/build/CMakeFiles/install/local.dir
+/home/steven/geant4.10.02.p03/examples/basic/B1/build/CMakeFiles/list_install_components.dir

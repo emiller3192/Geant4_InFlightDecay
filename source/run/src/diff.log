@@ -1,0 +1,502 @@
+29c29
+< //
+---
+> // 
+31c31
+< //	GEANT 4 class header file
+---
+> //	GEANT 4 class header file 
+50c50
+< 
+---
+>  
+89c89
+< G4PhysicsListHelper* G4PhysicsListHelper::GetPhysicsListHelper()
+---
+> G4PhysicsListHelper* G4PhysicsListHelper::GetPhysicsListHelper()  
+123,128c123,128
+< 
+<     if      ( name == "e-") isElectron = true;
+<     else if ( name == "e+") isPositron = true;
+<     else if ( name == "gamma") isGamma = true;
+<     else if ( name == "GenericIon") isGenericIon = true;
+<     else if ( name == "proton") isProton = true;
+---
+>     
+>     if      ( name == "e-") isElectron = true; 
+>     else if ( name == "e+") isPositron = true; 
+>     else if ( name == "gamma") isGamma = true; 
+>     else if ( name == "GenericIon") isGenericIon = true; 
+>     else if ( name == "proton") isProton = true; 
+138c138
+<   //  e+, e- and gamma should exist
+---
+>   //  e+, e- and gamma should exist 
+151,152c151,152
+< 	     << missingName << " do not exist " << G4endl;
+<       G4cout << " These particle are necessary for basic EM processes"
+---
+> 	     << missingName << " do not exist " << G4endl; 
+>       G4cout << " These particle are necessary for basic EM processes" 
+162c162
+<   //  proton should exist
+---
+>   //  proton should exist 
+170c170
+< 	     << missingName << " does not exist "<< G4endl;
+---
+> 	     << missingName << " does not exist "<< G4endl; 
+179c179
+< 
+---
+>    
+181c181
+<   //  GenericIonn should exist
+---
+>   //  GenericIonn should exist 
+189c189
+< 	     << missingName << " does not exist "<< G4endl;
+---
+> 	     << missingName << " does not exist "<< G4endl; 
+197c197
+< 
+---
+>       
+217c217
+<   G4int nParaWorld =
+---
+>   G4int nParaWorld = 
+219,221c219,221
+< 
+<   if ( nParaWorld>0 ||
+<        useCoupledTransportation ||
+---
+>   
+>   if ( nParaWorld>0 || 
+>        useCoupledTransportation || 
+226c226
+< 	     << "--- G4CoupledTransportation is used "
+---
+> 	     << "--- G4CoupledTransportation is used " 
+230c230
+<     theTransportationProcess = new G4CoupledTransportation(verboseLevelTransport);
+---
+>     theTransportationProcess = new G4CoupledTransportation(verboseLevelTransport);    
+234c234
+< 
+---
+>  
+240c240
+<     // Add transportation process for all particles
+---
+>     // Add transportation process for all particles 
+254c254
+<     }
+---
+>     } 
+256c256
+<     if(particle->GetParticleType() == "Molecule") continue;
+---
+>     if(particle->GetParticleType() == "Molecule") continue; 
+267c267
+< 
+---
+>   
+271c271
+<   std::ifstream fIn;
+---
+>   std::ifstream fIn;  
+279c279
+< 	     << G4endl;
+---
+> 	     << G4endl; 
+284c284
+<     // check if the file has been opened successfully
+---
+>     // check if the file has been opened successfully 
+293c293
+< 		  "Run0105", JustWarning,
+---
+> 		  "Run0105", JustWarning, 
+298a299
+>  
+300,301c301
+< 
+<   // create OrdParamTable
+---
+>   // create OrdParamTable   
+312c312
+<     // read in the file and fill the table
+---
+>     // read in the file and fill the table 
+320c320
+<       sizeOfTable +=1;
+---
+>       sizeOfTable +=1;  
+335c335
+< 		"Run0106", JustWarning,
+---
+> 		"Run0106", JustWarning, 
+341c341
+<   return;
+---
+>   return;  
+351c351
+< 	     << " No ordering parameter table  : " << ordParamFileName
+---
+> 	     << " No ordering parameter table  : " << ordParamFileName 
+358,359c358,359
+< 	 << ordParamFileName << G4endl;
+<   G4cout << "          TypeName  "
+---
+> 	 << ordParamFileName << G4endl; 
+>   G4cout << "          TypeName  " 
+366,367c366,367
+<     G4cout << std::setw(18)     << tmp->processTypeName
+< 	   << std::setw(15)     << tmp->processType
+---
+>     G4cout << std::setw(18)     << tmp->processTypeName 
+> 	   << std::setw(15)     << tmp->processType 
+369,370c369,370
+< 	   << std::setw(15)	<< tmp->ordering[0]
+< 	   << std::setw(15)	<< tmp->ordering[1]
+---
+> 	   << std::setw(15)	<< tmp->ordering[0] 
+> 	   << std::setw(15)	<< tmp->ordering[1] 
+378c378
+<   }
+---
+>   }  
+390c390
+< 	     << " No ordering parameter table  : " << ordParamFileName
+---
+> 	     << " No ordering parameter table  : " << ordParamFileName 
+400,405c400,405
+<       value.processTypeName = tmp->processTypeName;
+<       value.processType     = tmp->processType;
+<       value.processSubType  = tmp->processSubType;
+<       value.ordering[0]     = tmp->ordering[0];
+<       value.ordering[1]     = tmp->ordering[1];
+<       value.ordering[2]     = tmp->ordering[2];
+---
+>       value.processTypeName = tmp->processTypeName; 
+>       value.processType     = tmp->processType; 
+>       value.processSubType  = tmp->processSubType; 
+>       value.ordering[0]     = tmp->ordering[0]; 
+>       value.ordering[1]     = tmp->ordering[1]; 
+>       value.ordering[2]     = tmp->ordering[2]; 
+408c408
+<   }
+---
+>   }  
+420c420
+< 	     << " No ordering parameter table  : " << ordParamFileName
+---
+> 	     << " No ordering parameter table  : " << ordParamFileName 
+425c425
+< 		"Run0107", FatalException,
+---
+> 		"Run0107", FatalException, 
+430c430
+<   const G4String pName = process->GetProcessName();
+---
+>   const G4String pName = process->GetProcessName(); 
+433c433
+< 
+---
+>   
+437,438c437,438
+< 	   << pName << " Process Type = " << pType
+< 	   << " SubType = "<< pSubType
+---
+> 	   << pName << " Process Type = " << pType 
+> 	   << " SubType = "<< pSubType  
+450c450
+< 	     << " has illegal Process Type = " << pType
+---
+> 	     << " has illegal Process Type = " << pType 
+455c455
+< 		"Run0108", FatalException,
+---
+> 		"Run0108", FatalException, 
+459c459
+< 
+---
+>   
+466,467c466,467
+<       ord[0] = tmp->ordering[0];
+<       ord[1] = tmp->ordering[1];
+---
+>       ord[0] = tmp->ordering[0]; 
+>       ord[1] = tmp->ordering[1]; 
+473c473
+<   }
+---
+>   } 
+479,480c479,480
+< 	     << " with  type/subtype ="
+< 	     << pType << "/" << pSubType
+---
+> 	     << " with  type/subtype =" 
+> 	     << pType << "/" << pSubType 
+486c486
+< 		"Run0109", FatalException,
+---
+> 		"Run0109", FatalException, 
+514c514
+<       if ((p->GetProcessType()== pType)  &&
+---
+>       if ((p->GetProcessType()== pType)  && 
+521,522c521,522
+< 		 << " with  type/subtype ="
+< 		 << pType << "/" << pSubType
+---
+> 		 << " with  type/subtype =" 
+> 		 << pType << "/" << pSubType 
+531c531
+< 		    "Run0111", JustWarning,
+---
+> 		    "Run0111", JustWarning, 
+553,554c553,554
+<     }
+<   }
+---
+>     } 
+>   } 
+559,560c559,560
+< 	   << " with  type/subtype ="
+< 	   << pType << "/" << pSubType
+---
+> 	   << " with  type/subtype =" 
+> 	   << pType << "/" << pSubType 
+571c571
+< 
+---
+>   
+573c573
+< 
+---
+>   
+582c582
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+592c592
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+602c602
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+612c612
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+622c622
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+632c632
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+642c642
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+652c652
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+662c662
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+672c672
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+682c682
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+692c692
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+702c702
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+712c712
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+722c722
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+732c732
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+742c742
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+752c752
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+762c762
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+772c772
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+782c782
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+792c792
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+802c802
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+812c812
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+822c822
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+832c832
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+842c842
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+852c852
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+862c862
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+872c872
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+882c882
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+892c892
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+928c928
+<   tmp.ordering[1]     = 0;
+---
+>   tmp.ordering[1]     = 0; 
+972c972
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+982c982
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+992c992
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+1002c1002
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+1012c1012
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+1022c1022
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+1028c1028
+<   tmp.ordering[1]     =  -1;
+---
+>   tmp.ordering[1]     = -1;
+1032c1032
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+1038c1038
+<   tmp.ordering[1]     =  -1;
+---
+>   tmp.ordering[1]     = -1;
+1042c1042
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+1048c1048
+<   tmp.ordering[1]     =  -1;
+---
+>   tmp.ordering[1]     = -1;
+1052c1052
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+1059c1059
+<   tmp.ordering[2]     =  -1;
+---
+>   tmp.ordering[2]     =  1000;
+1062c1062
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+1068c1068
+<   tmp.ordering[1]     =  -1;
+---
+>   tmp.ordering[1]     = -1;
+1072c1072
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+1078c1078
+<   tmp.ordering[1]     =  -1;
+---
+>   tmp.ordering[1]     = -1;
+1082c1082
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+1092c1092
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+1102c1102
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+1112c1112
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+1122c1122
+<   sizeOfTable +=1;
+---
+>   sizeOfTable +=1;  
+1123a1124,1125
+> 
+> 
